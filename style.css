@@ -1,0 +1,69 @@
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    margin:0;
+    font-family: 'Lato', sans-serif;
+}
+
+#header {
+    position: relative;
+    background-color: #0f5591;
+}
+#logo{
+    display: inline-block;
+    color: crimson;
+    padding: 1em;
+    font-weight: bold;
+    font-size: x-large;
+    margin-top: 0.5em;
+}
+.h1 {
+    display: inline-block;
+    padding-left: 2em;
+}
+#main-nav {
+    position: absolute;
+    right: 6em;
+    top:0;
+}
+#main-nav li {
+    display: inline-block;
+    padding-top: 1.3em;
+}
+#main-nav a {
+    text-decoration: none;
+    padding-right: 30px;
+    color: white;
+}
+#main-nav a:hover {
+    color: crimson;
+}
+
+footer {
+    background-color: #0f5591;
+}
+
+#footer-nav li {
+    display: inline-block;
+    padding-top: 1.3em;
+}
+#footer-nav a {
+    text-decoration: none;
+    padding-right: 30px;
+    color: white;
+}
+#footer-nav a:hover {
+    color: crimson;
+}
+#copy {
+    margin-top: 2em;
+    font-size: x-small;
+    color: white;
+    text-align: center;
+}
+
+
