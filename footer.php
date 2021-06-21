@@ -5,6 +5,6 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-    <div id="copy">&copy; Copywrite Entertainment Hub, 2021. All right reserved.</div>
+    <div id="copy">&copy; Copyright Entertainment Hub, 2021. All right reserved.</div>
 </footer>
 
