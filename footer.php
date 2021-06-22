@@ -1,6 +1,6 @@
 <footer>
         <nav id="footer-nav">
-            <ul class="nav">
+            <ul class="nav" >
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
