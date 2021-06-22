@@ -15,7 +15,7 @@
     <nav class="main-nav navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <div>
-                <img src="Images" alt="entertainment-hub logo" width="150px">
+                <img src="./Images/" alt="entertainment-hub logo" width="150px">
             </div>
             <div>
                 <a class="navbar-brand" href="index.php" id="logo">Entertainment Hub</a>
