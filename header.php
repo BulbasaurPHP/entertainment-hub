@@ -9,7 +9,7 @@
             <li><a href="#">Contests</a></li>
             <li><a href="#">Trivia</a></li>
             <li><a href="#">More</a></li>
-            <li><a href="#">Log-in</a></li>
+            <li><a href="login.php">Log-in</a></li>
         </ul>
     </nav>
 </div>
