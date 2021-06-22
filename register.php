@@ -40,11 +40,8 @@ if(isset($_POST['email'])){
         <title>PHP Content</title>
     </head>
     <body>
-    <?php
-    include 'validate.php';
-    ?>
         <main>
-            <form method="post" action="index.php">
+            <form method="post" action="index.php" id="register-form">
                 <div class="container">
                     <div id="sem">
                         <label for="category">Category</label>
