@@ -9,9 +9,23 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-expand {
+    max-width: 100vw;
+}
+
 #header {
     position: relative;
     background-color: #0f5591;
+}
+
+/* bootstrap navbar */
+.bg-dark{
+    background-color: #0f5591 !important; 
 }
 #logo{
     display: inline-block;
@@ -34,13 +48,13 @@ body {
     display: inline-block;
     padding-top: 1.3em;
 }
-#main-nav a {
+a.nav-link {
     text-decoration: none;
     padding-right: 30px;
     color: white;
 }
-#main-nav a:hover {
-    color: crimson;
+a.nav-link:hover {
+    color: crimson !important;
 }
 
 footer {
@@ -99,3 +113,35 @@ a.text-center{
 }
 
 
+
+/* Bootstrap */
+.filler-square {
+    background-color: cornflowerblue;
+    border: 1px solid #0f5591;
+    margin: 10px;
+    height: 200px;
+}
+
+#register-form {
+    border: 1px solid #0f5591;
+    padding: 10px;
+}
+
+.carousel-item {
+    padding: 40px;
+    height: 300px;
+    background-color: grey;
+}
+
+.movie-slider {
+    background-color: #bddef6;
+}
+
+.social-media .col {
+    padding: 40px;
+}
+
+.social-media .col .btn{
+    color: #0f5591;
+    border: 3px solid #0f5591;
+}

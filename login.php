@@ -24,7 +24,8 @@ if(isset($_POST['email'])){
 
 <head>
     <title>Entertainment Hub</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
 </head>
 
 <body>
