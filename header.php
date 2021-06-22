@@ -15,12 +15,8 @@
     <nav class="main-nav navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <div>
-                <img src="./Images/" alt="entertainment-hub logo" width="150px">
+                <img src="./Images/logo.jpg" alt="entertainment-hub logo" width="350px" height="150px" >
             </div>
-            <div>
-                <a class="navbar-brand" href="index.php" id="logo">Entertainment Hub</a>
-            </div>
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

@@ -81,7 +81,7 @@ footer {
 }
 
 form{
-    margin: 50 auto;
+    margin: auto;
     text-align: center;
 }
 
@@ -136,12 +136,36 @@ a.text-center{
 .movie-slider {
     background-color: #bddef6;
 }
-
+.social-media{
+    width: 1200px;
+}
 .social-media .col {
     padding: 40px;
+    margin: 0;
+    background-color: #0f5591;
+    color: white;
 }
 
 .social-media .col .btn{
-    color: #0f5591;
-    border: 3px solid #0f5591;
+    background-color: #0f5591;
+    color: white;
+    border: 3px solid white;
 }
+
+.social-media .col .btn:hover{
+    background-color: white;
+    color: #86b7fe;
+    font-weight: bold;
+}
+.movie-slider{
+    color: #0f5591 ;
+}
+.movie-slider a:link{
+    text-decoration: none;
+    color: #0f5591;
+}
+.movie-slider li a:hover{
+    text-decoration: none;
+    color: lightseagreen;
+}
+

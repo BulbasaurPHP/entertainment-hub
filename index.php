@@ -13,13 +13,13 @@
     ?>
     <main id="main">
         <!-- Main container -->
-        <div class="container-fluid">
+        <div class="container-fluid text-center">
             <!-- One row means a breakpoint in layout -->
             <div class="row page-container">
                 <!-- First row : Title on left, registration on right -->
                 <div class="col-8">
 
-                    <div class="container">
+                    <div class="container ">
                         <div class="row">
                             <h1>Now Running : Batman V Superman</h1>
                         </div>
@@ -80,23 +80,23 @@
                 </div>
             </div>
 
-            <div class="row social-media">
-                <div class="container page-container">
+            <div class="row ">
+                <div class="container page-container social-media">
                     <div class="row">
                     <div class="col">
-                    <h3>Social Media Trends</h3>
-                    <p>Info about this feature</p>
-                    <a href="#" class="btn btn-primary bg-transparent">Learn More</a>
+                    <h3>What's Trending</h3>
+                    <p>Check it out!!</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
                 </div>
                 <div class="col">
                     <h3>Prize Pool Contest</h3>
-                    <p>Info about this feature</p>
-                    <a href="#" class="btn btn-primary bg-transparent">Learn More</a>
+                    <p>Nominate and WIN!!</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
                 </div>
                 <div class="col">
                     <h3>Quiz</h3>
-                    <p>Info about this feature</p>
-                    <a href="#" class="btn btn-primary bg-transparent">Learn More</a>
+                    <p>Buy Popcorns with Knowledge!!</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
                 </div>
                     </div>
                 </div>
@@ -104,7 +104,24 @@
             </div>
             <div class="row movie-slider" style="height: 300px;">
                 <div class="col page-container">
-                    <h3> Top 10 movies of the week, dynamically generated</h3>
+                    <h3 class=" m-lg-4"> Watchlist</h3>
+                    <div class="row text-lg-start">
+                        <ol class="col-md-6"><h5 class="text-lg-center">Most Watched Movies</h5>
+                            <li><a href="#">Pulp Fiction</a></li>
+                            <li><a href="#">Wolf of the Wallstreet</a></li>
+                            <li><a href="#">Pursuit of Happyness</a></li>
+                            <li><a href="#">October Sky</a></li>
+                            <li><a href="#">Joker</a></li>
+                        </ol>
+                        <ol class="col-md-6"> <h5 class="text-lg-center">Most Watched Shows</h5>
+                            <li><a href="#">Breaking Bad</a></li>
+                            <li><a href="#">Friends</a></li>
+                            <li><a href="#">The Office</a></li>
+                            <li><a href="#">The Flash</a></li>
+                            <li><a href="#">The Big Bang Theory</a></li>
+                        </ol>
+                    </div>
+
                 </div>
             </div>
         </div>
