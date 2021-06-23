@@ -116,10 +116,23 @@ a.text-center{
 
 /* Bootstrap */
 .filler-square {
-    background-color: cornflowerblue;
-    border: 1px solid #0f5591;
+    background-color: rgba(100, 148, 237, 0.096);
+    border: 1px solid #0f549127;
     margin: 10px;
     height: 200px;
+    position: relative;
+    top: 170px;
+}
+
+img.filler-square{
+    opacity: 0.85;
+    transition: all 300ms ease-in;
+}
+
+img.filler-square:hover{
+    opacity: 1;
+    transform: scale(1.4,1.4);
+    transition: all 300ms ease-in;
 }
 
 #register-form {
@@ -128,9 +141,12 @@ a.text-center{
 }
 
 .carousel-item {
-    padding: 40px;
-    height: 300px;
+    height: 600px;
     background-color: grey;
+}
+
+.carousel-item img{
+    max-width: 1000px;
 }
 
 .movie-slider {
@@ -169,3 +185,9 @@ a.text-center{
     color: lightseagreen;
 }
 
+.banner-image{
+    background: url('../images/banner.png');
+    height: 466px;
+    color: aliceblue;
+    background-size: cover;
+}

@@ -19,22 +19,22 @@
                 <!-- First row : Title on left, registration on right -->
                 <div class="col-8">
 
-                    <div class="container ">
+                    <div class="container banner-image">
                         <div class="row">
-                            <h1>Now Running : Batman V Superman</h1>
+                            <h1>Amazon buys MGM Studios</h1>
                         </div>
                         <!-- upcoming nomination, newest movie list, nomination leaderboard -->
                         <div class="row">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col filler-square">
-                                        <span>Placeholder</span>
+                                    <div class="col ">
+                                        <img src="images/poster_1.jpeg" alt="movie poster of Red Dawn" class="filler-square">
                                     </div>
-                                    <div class="col filler-square">
-                                        <span>Placeholder</span>
+                                    <div class="col ">
+                                        <img src="images/poster_2.jpg" alt="movie poster of No Time to Die" class="filler-square">
                                     </div>
-                                    <div class="col filler-square">
-                                        <span>Placeholder</span>
+                                    <div class="col ">
+                                        <img src="images/poster_3.jpg" alt="movie poster of Creed II" class="filler-square">
                                     </div>
                                 </div>
                             </div>
@@ -59,13 +59,13 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <p>Carousel Items comes here with movie banner </p>
+                                <img src="images/carousel/1.jpg" alt="movie poster of Red Dawn">
                             </div>
                             <div class="carousel-item">
-                                <p>Carousel Items comes here with movie banner </p>
+                                <img src="images/carousel/2.png" alt="movie poster of No Time to Die">
                             </div>
                             <div class="carousel-item">
-                                <p>Carousel Items comes here with movie banner </p>
+                                <img src="images/carousel/3.jpg" alt="movie poster of Creed II">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
