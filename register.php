@@ -81,7 +81,10 @@ if(isset($_POST['email'])){
                     </div>
                 </div>
                 <input id='buy' type="submit" value="Buy">
+                <br>
+                <a href="login.php" class="m-2">Already has an account? Click here for login</a>
             </form>
+            
         </main>
     </body>
 </html>
