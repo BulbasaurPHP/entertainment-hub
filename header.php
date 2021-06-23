@@ -87,10 +87,10 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle dropleft" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             More
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <ul class="dropdown-menu dropdown-menu-md-end" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#">Social Media Trends</a></li>
                             <li><a class="dropdown-item" href="#">Movie Recommendation</a></li>
                             <li><a class="dropdown-item" href="#">Snack Recommendation</a></li>
