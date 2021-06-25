@@ -59,6 +59,9 @@ a.nav-link:hover {
 
 footer {
     background-color: #0f5591;
+    padding-left: 2em;
+    font-size: large;
+    margin-top: 2em;
 }
 
 #footer-nav li {
@@ -71,11 +74,11 @@ footer {
     color: white;
 }
 #footer-nav a:hover {
-    color: crimson;
+    color: #20c997;
 }
 #copy {
     margin-top: 2em;
-    font-size: x-small;
+    font-size: smaller;
     color: white;
     text-align: center;
 }
@@ -229,6 +232,7 @@ img.filler-square:hover{
     margin-top: 1em;
     border: none;
 }
+
 .m-4{
     padding-bottom: 4.8em;
     text-decoration: none;

@@ -114,14 +114,14 @@
                 <div class="col page-container watchlist">
                     <h3 class=" m-lg-4"> Watchlist of the Week</h3>
                     <div class="row text-lg-start">
-                        <ol class="col-md-6"><h5 class="text-lg-center">Most Watched Movies</h5>
+                        <ol class="col-md-6" id="movies"><h5 class="text-lg-center">Most Watched Movies</h5>
                             <li><a href="#">Pulp Fiction</a></li>
                             <li><a href="#">Wolf of the Wallstreet</a></li>
                             <li><a href="#">Pursuit of Happyness</a></li>
                             <li><a href="#">October Sky</a></li>
                             <li><a href="#">Joker</a></li>
                         </ol>
-                        <ol class="col-md-6"> <h5 class="text-lg-center">Most Watched Shows</h5>
+                        <ol class="col-md-6" id="shows"> <h5 class="text-lg-center">Most Watched Shows</h5>
                             <li><a href="#">Breaking Bad</a></li>
                             <li><a href="#">Friends</a></li>
                             <li><a href="#">The Office</a></li>
