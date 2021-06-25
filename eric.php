@@ -74,20 +74,20 @@ require_once 'header.php';
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <h1 class="amazon">MGM  Studios Belongs To Amazon Now</h1>
+                            <h1 class="amazon">Amazon  Buys  MGM  Studios</h1>
                             <img src="Images/banner.png" alt="movie poster of Red Dawn">
 
 
                         </div>
                         <div class="carousel-item">
-                            <h1 class="amazon">Watch  These  Blockbusters on Amazon-MGM</h1>
+                            <h1 class="amazon">Watch  These  Blockbusters</h1>
                             <img src="images/poster_1 copy.jpeg" alt="movie poster of Red Dawn">
                             <img src="images/carousel/2.png" alt="movie poster of No Time to Die">
                             <img src="images/3_creed.jpeg" alt="movie poster of Creed II">
 
                         </div>
                         <div class="carousel-item">
-                            <h1 class="amazon">Join  Amazon  Prime  Now</h1>
+                            <h1 class="amazon">Join  AmazonPrime  Now</h1>
                             <img src="Images/prime.jpeg" alt="Amazon prime image">
                         </div>
                     </div>
@@ -125,68 +125,49 @@ require_once 'header.php';
             </div>
 
         </div>
-            <div class="container watchlist">
+        <div class="row" style="height: 300px;">
+            <div class="col page-container watchlist">
                 <h3 class=" m-lg-4"> Watchlist of the Week</h3>
-                    <div class="row">
-                        <div class="row col-md-6 border border-4 text-center">
-                            <h3>Most Watched Movies</h3>
-                            <div class="col-sm-4 border-3">
-                                <a href="">
-                                    <img src="styles/pulp_fic.jpg" alt="pulp fiction">
-                                    <div class="caption">
-                                        <p>Pulp Fiction</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-sm-4">
-                                <a href="">
-                                    <img src="Images/DD.jpeg" alt="D&D">
-                                    <div class="caption">
-                                        <p>Dumb & Dumber</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-sm-4">
-                                <a href="" >
-                                    <img src="Images/IM.jpeg" alt="Iron Man">
-                                    <div class="caption">
-                                        <p>Iron Man</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row col-md-6 border border-4 text-center">
-                            <h3>Most Watched Shows</h3>
-                            <div class="col-sm-4">
-                                <a href="" >
-                                    <img src="styles/bb.jpeg" alt="Breaking Bad">
-                                    <div class="caption">
-                                        <p>Breaking Bad</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-sm-4">
-                                <a href="" >
-                                    <img src="Images/tbbt.jpeg" alt="TBBT">
-                                    <div class="caption">
-                                        <p>The BigBang Theory</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-sm-4">
-                                <a href="" >
-                                    <img src="Images/got.jpeg" alt="Game of Thrones">
-                                    <div class="caption">
-                                        <p>Game of Thrones</p>
-                                    </div>
-                                </a>
-                            </div>
-                    </div>
+                <div class="row text-lg-start">
+                    <ol class="col-md-6"><h5 class="text-lg-center">Most Watched Movies</h5>
+                        <li><a href="#">Pulp Fiction</a></li>
+                        <li><a href="#">The Wolf of Wallstreet</a></li>
+                        <li><a href="#">Pursuit of Happiness</a></li>
+                        <li><a href="#">October Sky</a></li>
+                        <li><a href="#">Joker</a></li>
+                    </ol>
+                    <ol class="col-md-6"> <h5 class="text-lg-center">Most Watched Shows</h5>
+                        <li><a href="#">Breaking Bad</a></li>
+                        <li><a href="#">Friends</a></li>
+                        <li><a href="#">The Office</a></li>
+                        <li><a href="#">The Flash</a></li>
+                        <li><a href="#">The Big Bang Theory</a></li>
+                    </ol>
                 </div>
+
             </div>
         </div>
     </div>
 </main>
+<!-- <main id="main" class="page-container">
+        <?
+include_once 'register.php';
+?>
+        <p> CONTENT</p>
+        <p> CONTENT</p>
+        <p> CONTENT</p>
+        <p> CONTENT</p>
+        <p> CONTENT</p>
+        <p> CONTENT</p>
+        <p> CONTENT</p>
+        <p> CONTENT</p>
+        <p> CONTENT</p>
+        <p> CONTENT</p>
+        <p> CONTENT</p>
+        <p> CONTENT</p>
+        <p> CONTENT</p>
+        <p> CONTENT</p>
+    </main> -->
 <?php
 include 'footer.php';
 ?>

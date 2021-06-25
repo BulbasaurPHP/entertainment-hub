@@ -2,7 +2,9 @@
     <nav class="main-nav navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <div>
-                <img src="./images/logo.jpg" alt="entertainment-hub logo" width="350px" height="150px" >
+                <a href="index.php">
+                    <img src="./images/logo.jpg" alt="entertainment-hub logo" width="350px" height="150px" >
+                </a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

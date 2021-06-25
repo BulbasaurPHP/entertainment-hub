@@ -27,8 +27,15 @@ body {
 .bg-dark{
     background-color: #0f5591 !important;
 }
-
-.h1{
+#logo{
+    display: inline-block;
+    color: crimson;
+    padding: 1em;
+    font-weight: bold;
+    font-size: x-large;
+    margin-top: 0.5em;
+}
+.h1 {
     display: inline-block;
     padding-left: 2em;
 }
@@ -47,13 +54,11 @@ a.nav-link {
     color: white;
 }
 a.nav-link:hover {
-    color: #20c997 !important;
+    color: crimson !important;
 }
 
 footer {
     background-color: #0f5591;
-    padding-top:1em;
-    padding-left: 2em;
 }
 
 #footer-nav li {
@@ -70,7 +75,7 @@ footer {
 }
 #copy {
     margin-top: 2em;
-    font-size: small;
+    font-size: x-small;
     color: white;
     text-align: center;
 }
@@ -107,7 +112,7 @@ a.text-center{
     color: brown;
 }
 
-.title{
+.title {
     text-align: left;
     font-family: Lato;
     font-weight: 900;
@@ -115,6 +120,7 @@ a.text-center{
     margin-top: 30px;
     margin-bottom: 60px;
 }
+
 .sub-title{
     text-align:left;
     font-size: 0.9em;
@@ -189,7 +195,6 @@ a.text-center{
 }
 .social-media{
     width: 1200px;
-    margin-top: 2em;
 }
 .social-media .col {
     padding: 40px;
@@ -248,49 +253,12 @@ a.text-center{
     height: 450px;
 }
 
-/*Carousel Text */
-
 .amazon{
     font-family: "Lato";
     font-weight: bold;
     color:white;
     text-shadow: 2px 2px 4px #000;
     position: absolute;
-    top:25vw;
+    top:5vw;
     left:10vw;
-}
-
-/*watchlist*/
-.m-lg-4{
-    color: white;
-}
-.col-md-6{
-    color: white;
-}
-.col-sm-4 a:active{
-    text-decoration: none;
-    color: white;
-}
-.col-sm-4 a:visited{
-    text-decoration: none;
-    color: white;
-}
-.col-sm-4 a:link{
-    text-decoration: none;
-}
-
-.col-sm-4 img{
-    margin: 0;
-    padding: 0;
-    width: 100px;
-    height: 100px;
-}
-
-.border-4{
-    width: 40%;
-    margin: auto;
-    margin-bottom: 1em;
-}
-.col-sm-4{
-    margin-top: 1em;
 }
