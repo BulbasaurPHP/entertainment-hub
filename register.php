@@ -35,29 +35,18 @@ if(isset($_POST['email'])){
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="request form">
+        <link rel="stylesheet" type="text/css" href="styles/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="styles/style.css" />
         <title>PHP Content</title>
     </head>
     <body>
+    <?php
+    require_once 'header.php';
+
+    ?>
         <main>
             <form method="post" action="index.php" id="register-form">
                 <div class="container">
-                    <div id="sem">
-                        <label for="category">Category</label>
-                        <select name="category">
-                            <option value="Select category">select category</option>
-                            <?php
-
-                            // PHP Array for dropdown
-                            $category=['Jeans','Shoes','Accessories'];
-                            for ($i=0; $i<count($category);$i++)
-                            {
-                                echo "<option value='$category[$i]'> $category[$i] </option>";
-                            }
-                            ?>
-                        </select>
-                    </div>
                     <div id="customer">
                         <label for="name" >Name</label>
                         <input name="name" type="text" value=<?= isset($name)? $name:'';?>>
@@ -73,18 +62,21 @@ if(isset($_POST['email'])){
                         <?= isset($phoneerror) ? $phoneerror : ""?>
                     </div>
                     <div>
-                        <label for="role">Role</label>
-                        <input type="radio" name="role" value="admin">
+                        <label for="role">Role:</label>
                         <label for="admin">Admin</label>
-                        <input type="radio" name="role" value="user">
+                        <input type="radio" name="role" value="admin">
                         <label for="user">User</label>
+                        <input type="radio" name="role" value="user">
                     </div>
                 </div>
-                <input id='buy' type="submit" value="Buy">
-                <br>
-                <a href="login.php" class="m-2">Already has an account? Click here for login</a>
+                <input id='buy' type="submit" value="Create">
             </form>
-            
+            <div class="m-4 text-center">
+                <a href="login.php" class="m-2">Already have an account? Click here to login</a>
+            </div>
         </main>
+    <?php
+    include 'footer.php'
+    ?>
     </body>
 </html>

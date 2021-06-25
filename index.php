@@ -59,22 +59,21 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <h1 class="amazon">Amazon buys MGM Studios</h1>
-                                <img src="images/RED_DAWN02.jpeg" alt="movie poster of Red Dawn">
+                                <h1 class="amazon">Amazon  Buys  MGM  Studios</h1>
+                                <img src="Images/carousel/banner.png" alt="movie poster of Red Dawn">
+
+
+                            </div>
+                            <div class="carousel-item">
+                                <h1 class="amazon">Watch  These  Blockbusters</h1>
                                 <img src="images/poster_1 copy.jpeg" alt="movie poster of Red Dawn">
-
-                            </div>
-                            <div class="carousel-item">
-                                <h1 class="amazon">Watch these Blockbusters</h1>
-                                <img src="images/NoTimeToDie.jpeg" alt="movie poster of No Time to Die">
                                 <img src="images/carousel/2.png" alt="movie poster of No Time to Die">
+                                <img src="images/3_creed.jpeg" alt="movie poster of Creed II">
 
                             </div>
                             <div class="carousel-item">
-                                <h1 class="amazon">Join AmazonPrime Now</h1>
-                                <img src="images/carousel/3.jpg" alt="movie poster of Creed II">
-                                <img src="images/CreedII.jpeg" alt="movie poster of Creed II">
-                                <img src="images/3_creed.jpeg" alt="movie poster of Creed II">
+                                <h1 class="amazon">Join  AmazonPrime  Now</h1>
+                                <img src="prime.jpeg" alt="Amazon prime image">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -135,26 +134,6 @@
             </div>
         </div>
     </main>
-
-    <!-- <main id="main" class="page-container">
-        <?
-        include_once 'register.php';
-        ?>
-        <p> CONTENT</p>
-        <p> CONTENT</p>
-        <p> CONTENT</p>
-        <p> CONTENT</p>
-        <p> CONTENT</p>
-        <p> CONTENT</p>
-        <p> CONTENT</p>
-        <p> CONTENT</p>
-        <p> CONTENT</p>
-        <p> CONTENT</p>
-        <p> CONTENT</p>
-        <p> CONTENT</p>
-        <p> CONTENT</p>
-        <p> CONTENT</p>
-    </main> -->
     <?php
     include 'footer.php';
     ?>

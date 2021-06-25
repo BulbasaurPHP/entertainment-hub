@@ -225,3 +225,14 @@ img.filler-square:hover{
     top:27vw;
     left:5vw;
 }
+#register-form{
+    margin-top: 1em;
+    border: none;
+}
+.m-4{
+    padding-bottom: 4.8em;
+    text-decoration: none;
+}
+.m-4 > a:active{
+    color: black;
+}
