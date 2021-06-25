@@ -60,7 +60,7 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <h1 class="amazon">Amazon  Buys  MGM  Studios</h1>
-                                <img src="Images/carousel/banner.png" alt="movie poster of Red Dawn">
+                                <img src="Images/banner.png" alt="movie poster of Red Dawn">
 
 
                             </div>
@@ -73,7 +73,7 @@
                             </div>
                             <div class="carousel-item">
                                 <h1 class="amazon">Join  AmazonPrime  Now</h1>
-                                <img src="prime.jpeg" alt="Amazon prime image">
+                                <img src="Images/prime.jpeg" alt="Amazon prime image">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
