@@ -21,20 +21,19 @@
 
                     <div class="container banner-image">
                         <div class="row">
-                            <h1>Amazon buys MGM Studios</h1>
                         </div>
                         <!-- upcoming nomination, newest movie list, nomination leaderboard -->
                         <div class="row">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col ">
-                                        <img src="images/poster_1.jpeg" alt="movie poster of Red Dawn" class="filler-square">
+                                    <div class=" container col-sm-4 ">
+                                        <h3>Upcoming Events</h3>
                                     </div>
-                                    <div class="col ">
-                                        <img src="images/poster_2.jpg" alt="movie poster of No Time to Die" class="filler-square">
+                                    <div class="container col-sm-4 ">
+                                        <h3>New Movies</h3>
                                     </div>
-                                    <div class="col ">
-                                        <img src="images/poster_3.jpg" alt="movie poster of Creed II" class="filler-square">
+                                    <div class="container col-sm-4 ">
+                                        <h3>Leaderboards</h3>
                                     </div>
                                 </div>
                             </div>
@@ -52,6 +51,7 @@
             <div class="row movie-slider">
                 <div class="col page-container">
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -59,13 +59,22 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="images/carousel/1.jpg" alt="movie poster of Red Dawn">
+                                <h1 class="amazon">Amazon buys MGM Studios</h1>
+                                <img src="images/RED_DAWN02.jpeg" alt="movie poster of Red Dawn">
+                                <img src="images/poster_1 copy.jpeg" alt="movie poster of Red Dawn">
+
                             </div>
                             <div class="carousel-item">
+                                <h1 class="amazon">Watch these Blockbusters</h1>
+                                <img src="images/NoTimeToDie.jpeg" alt="movie poster of No Time to Die">
                                 <img src="images/carousel/2.png" alt="movie poster of No Time to Die">
+
                             </div>
                             <div class="carousel-item">
+                                <h1 class="amazon">Join AmazonPrime Now</h1>
                                 <img src="images/carousel/3.jpg" alt="movie poster of Creed II">
+                                <img src="images/CreedII.jpeg" alt="movie poster of Creed II">
+                                <img src="images/3_creed.jpeg" alt="movie poster of Creed II">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -80,7 +89,7 @@
                 </div>
             </div>
 
-            <div class="row ">
+            <div class="row">
                 <div class="container page-container social-media">
                     <div class="row">
                     <div class="col">
@@ -102,9 +111,9 @@
                 </div>
                 
             </div>
-            <div class="row movie-slider" style="height: 300px;">
-                <div class="col page-container">
-                    <h3 class=" m-lg-4"> Watchlist</h3>
+            <div class="row" style="height: 300px;">
+                <div class="col page-container watchlist">
+                    <h3 class=" m-lg-4"> Watchlist of the Week</h3>
                     <div class="row text-lg-start">
                         <ol class="col-md-6"><h5 class="text-lg-center">Most Watched Movies</h5>
                             <li><a href="#">Pulp Fiction</a></li>
