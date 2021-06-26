@@ -75,8 +75,6 @@ if(isset($_POST['email'])){
                 <a href="login.php" class="m-2">Already have an account? Click here to login</a>
             </div>
         </main>
-    <?php
-    include 'footer.php'
-    ?>
+   
     </body>
 </html>
