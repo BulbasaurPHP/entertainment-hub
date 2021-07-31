@@ -9,7 +9,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
 
-//FETCH NAMES AND EMAILS FROM THE SERVER - overly simplified because everything makes me sad right now.
+//FETCH NAMES AND EMAILS FROM THE SERVER - overly simplified prior to integrating with DB access feature
 
 $sql = "SELECT * FROM user";
 $stmt = $db->prepare($sql);
@@ -112,13 +112,13 @@ if(isset($_POST['eblast'])) {
                     $mail->Mailer = "smtp";
                     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
                     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                    $mail->Username   = 'BigShinyTakesInstitute@gmail.com';                     //SMTP username
+                    $mail->Username   = 'ehubcommunications@gmail.com';                     //SMTP username
                     $mail->Password   = 'thisisagoodpassword';                               //SMTP password
                     $mail->SMTPSecure = "tls";            //Enable implicit TLS encryption
                     $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
                 
                     //Recipients
-                    $mail->setFrom('BigShinyTakesInstitute@gmail.com', 'Entertainment-Hub');
+                    $mail->setFrom('ehubcommunications@gmail.com', 'Entertainment-Hub');
                     $mail->addAddress($email, $name);     //Add a recipient
                 
                 
