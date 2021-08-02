@@ -2,8 +2,8 @@
     <nav class="main-nav navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <div>
-                <a href="index.php">
-                    <img src="./images/logo.jpg" alt="entertainment-hub logo" width="350px" height="150px" >
+                <a href="../index.php">
+                    <img src="../images/logo.jpg" alt="entertainment-hub logo" width="350px" height="150px" >
                 </a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +29,7 @@
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item" href="#">Top Ten Chart</a></li>
-                            <li><a class="dropdown-item" href="newmovies/list-newmovies.php">Newest Movies List</a></li>
+                            <li><a class="dropdown-item" href="#">Newest Movies List</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">

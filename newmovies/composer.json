@@ -1,0 +1,15 @@
+{
+    "name": "ruthf/newmovies",
+    "authors": [
+        {
+            "name": "ruth frogoso",
+            "email": "ruthfrogoso@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Model\\": "Models/"
+        }
+    }
+}
