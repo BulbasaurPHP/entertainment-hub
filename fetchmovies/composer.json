@@ -1,0 +1,16 @@
+{
+    "name": "navaneeth/fetchmovies",
+    "description": "fetching movies from ombd and writing to DB",
+    "autoload": {
+        "psr-4": {
+            "models\\": "models/"
+        }
+    },
+    "authors": [
+        {
+            "name": "navaneeth ashok",
+            "email": "navaneeth619@gmail.com"
+        }
+    ],
+    "require": {}
+}
