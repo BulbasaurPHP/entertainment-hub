@@ -15,3 +15,10 @@ July 30th Update
 August 1st Update
 - [x] New Movies List MVP added by Ruth
 - The New Movies List feature displays the newest released movies. Full CRUD operations can be performed. Going forward, full CRUD operations will be limited to authenticated admin users only and movie posters can be added.
+
+August 2nd Update - Navaneeth
+- [x] Fetching Movie details from OMDB API
+- [x] Adding the fetched details to Movie Table
+- The feature is availble at <server_ip>/fetchmovies.
+- Instructions regarding the feature is provided on the same page as well.
+- All the HTTP requests are handled through ajax calls, thus the user can do all the operations without browsing out of the page.
