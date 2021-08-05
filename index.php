@@ -32,7 +32,7 @@ require_once 'header.php';
                             <div class="container">
                                 <div class="row">
                                     <div class="feature-box col filler-square">
-                                        <h3 class=feature-box-title>Upcoming Events</h3>
+                                        <a href="NominationEvents/upcomingevents.php"><h3 class=feature-box-title>Upcoming Events</h3></a>
                                         <div class="feature-icon">
                                             <i class="fa-5x fas fa-calendar-day"></i>
                                         </div>

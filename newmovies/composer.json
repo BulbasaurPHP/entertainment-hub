@@ -6,7 +6,9 @@
             "email": "ruthfrogoso@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+      "ext-pdo": "*"
+    },
     "autoload": {
         "psr-4": {
             "Model\\": "Models/"

@@ -294,3 +294,17 @@ a.text-center{
 .col-sm-4{
     margin-top: 1em;
 }
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+}
+
+.nominationTitle{
+    text-transform: uppercase;
+    color: red;
+}
+.container{
+    padding-top: 20px;
+    padding-right: 20px;
+}
