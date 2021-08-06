@@ -122,7 +122,7 @@ if(isset($_POST['updEvents'])) {
 
             </span>
         </div>
-        <a href="./list-nominationevents.php" id="btn_back" class="btn btn-success float-left">Back</a>
+        <a href="listnominationevents.php" id="btn_back" class="btn btn-success float-left">Back</a>
         <button type="submit" name="updEvents"
                 class="btn btn-primary float-right" id="btn-submit">
             Update Nomination Events

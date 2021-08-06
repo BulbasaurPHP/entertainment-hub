@@ -64,7 +64,7 @@ $nominations = $pdostm->fetchAll(PDO::FETCH_ASSOC);
                         </form>
                     </td>
                     <td>
-                        <form action="delete-nominationevents.php" method="post">
+                        <form action="deletenominationevents.php" method="post">
                             <input type="hidden" name="movie_id" value=" <?= $nomination->nomination_id; ?>" />
                             <input type="submit" class="button btn btn-danger" name="deleteNominationEvents" value="Delete" />
                         </form>

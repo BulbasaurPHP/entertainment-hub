@@ -1,43 +1,23 @@
 <?php
+use Model\Database;
+use Model\Nominations;
 
-
-
+$db = Database::getdb();
+require_once '../NominationEvents/vendor/autoload.php';
 if(isset($_POST['addNewNomination'])) {
     //gather values from the form
     $name = $_POST['eventname'];
     $bio = $_POST ['bio'];
-    $release_date = $_POST['releasedate'];
-    $nomination_date = $_POST['nominationdate'];
-
-    $user = 'masterAdmin';
-    $password = 'bulbasaurAdmin';
-    $dbname = 'bulbasaur-db.ckohzdqyvmzm.ca-central-1.rds.amazona';
-    $dsn = 'mysql:host=localhost;dbname=' . $dbname;
-
-    $dbconn = new PDO($dsn, $user, $password);
-
-
-    $sql = "INSERT INTO nomination_events (name, bio, release_date,nomination_date) 
-              VALUES (:name, :bio, :release_date, :nomination_date) ";
-
-    $pst = $dbconn->prepare($sql);
-
-    $pst->bindParam(':make', $name);
-    $pst->bindParam(':model', $bio);
-    $pst->bindParam(':year', $release_date);
-    $pst->bindParam(':year', $nomination_date);
-
-    $count = $pst->execute();
+    $release = $_POST['releasedate'];
+    $nomination = $_POST['nominationdate'];
+    $n = new Nominations();
+    $count = $n->addevents($db,$name,$bio,$release,$nomination);
 
     if($count){
-        header("Location: list-nomination.php");
-    } else {
-        echo "problem adding a nomination";
+        header("../listnominationevents.php");
     }
+
 }
-
-
-
 ?>
 
 <!DOCTYPE html>
