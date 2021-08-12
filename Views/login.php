@@ -1,6 +1,7 @@
 <?php
 if(isset($_POST['email'])){
-    $email=$_POST['email'];
+    session_start();
+    $email=$_SESSION['email'];
     $pass=$_POST['password'];
     if ($email==""){
         $emailerror="Please enter your email";
@@ -16,7 +17,9 @@ if(isset($_POST['email'])){
         $passworderr="Please enter password";
     }
     else{
-        $passworderr="valid password, login successful";
+        session_start();
+        $email = $_SESSION['email'];
+        echo '<META HTTP-EQUIV="Refresh" Content="0; URL=index.php">';
     }
 }
 ?>
@@ -46,7 +49,7 @@ if(isset($_POST['email'])){
                     <?= isset($passworderr) ? $passworderr : "" ?>
                 </div>
             </div>
-            <input id='login' type="submit" value="Login">
+            <input id='login' type="submit" name="login" value="Login">
         </form>
         <a class="text-center" href="register.php">Register here for an account</a>
     </main>
@@ -54,5 +57,4 @@ if(isset($_POST['email'])){
     include 'footer.php';
     ?>
 </body>
-
 </html>

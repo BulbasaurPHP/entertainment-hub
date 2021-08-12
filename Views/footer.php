@@ -1,4 +1,4 @@
-<footer>
+<footer class="navbar">
         <nav id="footer-nav">
             <ul class="nav" >
                 <li><a href="#">About</a></li>

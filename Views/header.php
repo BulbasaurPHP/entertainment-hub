@@ -1,8 +1,10 @@
+<link rel="stylesheet" href="../styles/bootstrap.css">
+<link rel="stylesheet" href="../styles/style.css">
 <header id="header">
     <nav class="main-nav navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <div>
-                <a href="index.php">
+                <a href="../Views/index.php">
                     <img src="../Images/logo.jpg" alt="entertainment-hub logo" width="350px" height="150px" >
                 </a>
             </div>
@@ -65,7 +67,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Trivia
                         </a>
-                        <!--<a class="nav-link" href="#">Trivia</a>-->
+                        <a class="nav-link" href="../triviapdo/listtrivia.php">Trivia</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#">General Trivia</a></li>
                             <li><a class="dropdown-item" href="#">Cast Bio</a></li>
@@ -85,7 +87,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.php">Login</a>
+                        <a class="nav-link" href="../Views/login.php">Login</a>
                     </li>
                 </ul>
 

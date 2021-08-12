@@ -76,8 +76,6 @@ require_once 'header.php';
                         <div class="carousel-item active">
                             <h1 class="amazon">Amazon  Buys  MGM  Studios</h1>
                             <img src="Images/banner.png" alt="movie poster of Red Dawn">
-
-
                         </div>
                         <div class="carousel-item">
                             <h1 class="amazon">Watch  These  Blockbusters</h1>

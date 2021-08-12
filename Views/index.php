@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Entertainment Hub</title>
+    <title>Entertainment Hub</title
     <link rel="stylesheet" type="text/css" href="../styles/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="../styles/style.css" />
     <script src="../scripts/bootstrap.bundle.js"></script>
@@ -25,7 +25,6 @@ require_once 'header.php';
 
                     <div class="container ">
                         <div class="row">
-                            <h1 class="title">Entertainment Hub</h1>
                         </div>
                         <!-- upcoming nomination, newest movie list, nomination leaderboard -->
                         <div class="row">
@@ -113,7 +112,7 @@ require_once 'header.php';
                     </div>
                     <div class="col">
                         <h3>Prize Pool Contest</h3>
-                        <p>Nominate and WIN!!</p>
+                        <p><a href="../leaguepdo/Nominate.php">Nominate and WIN!!</a></p>
                         <a href="#" class="btn btn-primary">Learn More</a>
                     </div>
                     <div class="col">
