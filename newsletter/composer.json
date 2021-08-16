@@ -1,0 +1,16 @@
+{
+    "name": "navaneeth/newsletter",
+    "description": "fetching newsletters templates from DB",
+    "autoload": {
+        "psr-4": {
+            "models\\": "models/"
+        }
+    },
+    "authors": [
+        {
+            "name": "navaneeth ashok",
+            "email": "navaneeth619@gmail.com"
+        }
+    ],
+    "require": {}
+}
