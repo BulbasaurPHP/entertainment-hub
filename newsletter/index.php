@@ -40,6 +40,7 @@ require 'vendor/autoload.php';
             <button class=' btn btn-outline-success m-3' id='updateButton' onclick='updateNewsLetter();' disabled>Update</button>
             <button class='btn btn-outline-danger m-3' id='deleteButton' onclick='deleteNewsLetter();' disabled>Delete</button>
             <button class='btn btn-outline-primary m-3' onclick='copyNewsletter();'>Copy to Clipboard</button>
+
         </div>
         <p class="text-danger text-center" id="addFail"></p>
         <p class="text-success text-center" id="addPass"></p>
