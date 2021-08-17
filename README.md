@@ -1,6 +1,6 @@
 # Movie portal project
 
-##UPDATE Aug 17
+## UPDATE Aug 17
 
 - Eric added topten feature, a shopping cart feature and the admin eblast with a $_POST variable to connect with the newsletter feature.
 - full feature integration pending, removing code redundancies pending
