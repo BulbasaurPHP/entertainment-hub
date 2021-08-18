@@ -24,6 +24,7 @@ require 'vendor/autoload.php';
 
     <h1>Add Movies to Database</h1>
     <div class="container">
+        <a href="manage.php" class="btn btn-success">Manage Movies</a>
         <div class="row m-5">
             <div class="col m-3">
                 <form class="" id="form1" onsubmit="return fetchFromOMDB();">
@@ -67,6 +68,9 @@ require 'vendor/autoload.php';
                         <th>Actors</th>
                         <th>Release Year</th>
                         <th>Genre</th>
+                        <th>Release Date</th>
+                        <th class="d-none">Poster</th>
+                        <th>Preview</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -106,6 +110,8 @@ require 'vendor/autoload.php';
                 var actors = json.Actors;
                 var year = json.Year;
                 var genre = json.Genre;
+                var date = json.Released;
+                var posterIMG = json.Poster;
 
                 var tr_str = "<tr id=row" + i + " class='table-row'>" +
                     "<td class='movie-title'>" + title + "</td>" +
@@ -113,6 +119,9 @@ require 'vendor/autoload.php';
                     "<td class='actor'>" + actors + "</td>" +
                     "<td class='year'>" + year + "</td>" +
                     "<td class='genre'>" + genre + "</td>" +
+                    "<td class='date'>" + date + "</td>" +
+                    "<td class='poster d-none'>" + posterIMG + "</td>" +
+                    "<td><img src='" + posterIMG + "' width='75'></td>" +
                     "<td><button class='btn btn-danger' onclick='deleteRow(" + i + ")'>X</button></td>" +
                     "</tr>";
                 $("#resultTable tbody").append(tr_str);
@@ -128,7 +137,7 @@ require 'vendor/autoload.php';
         row.parentNode.removeChild(row);
     }
 
-    $("#addToDB").submit(function(event){
+    $("#addToDB").submit(function(event) {
         event.preventDefault();
         var movieObjects = [];
         var rows = document.getElementsByClassName("table-row");
@@ -139,18 +148,20 @@ require 'vendor/autoload.php';
                 director: row.getElementsByClassName("dir")[0].textContent,
                 actors: row.getElementsByClassName("actor")[0].textContent,
                 year: row.getElementsByClassName("year")[0].textContent,
-                genre: row.getElementsByClassName("genre")[0].textContent
+                genre: row.getElementsByClassName("genre")[0].textContent,
+                date: row.getElementsByClassName("date")[0].textContent,
+                poster: row.getElementsByClassName("poster")[0].textContent
             };
             movieObjects.push(movie);
         }
-        
+
         console.log(movieObjects);
         var values = JSON.stringify(movieObjects);
         console.log("##############################");
         console.log(values);
         console.log("##############################");
         document.getElementById("serialValue").value = values;
-        
+
         var values = $(movieObjects).serialize();
         $.ajax({
             type: "POST",
@@ -169,7 +180,7 @@ require 'vendor/autoload.php';
         });
 
     });
-    
+
     // function AddtoDB() {
 
     //     var movieObjects = [];
@@ -185,14 +196,14 @@ require 'vendor/autoload.php';
     //         };
     //         movieObjects.push(movie);
     //     }
-        
+
     //     console.log(movieObjects);
     //     var values = JSON.stringify(movieObjects);
     //     console.log("##############################");
     //     console.log(values);
     //     console.log("##############################");
     //     document.getElementById("serialValue").value = values;
-        
+
     //     var values = $(movieObjects).serialize();
     //     $.ajax({
     //         type: "POST",

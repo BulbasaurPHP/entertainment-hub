@@ -1,4 +1,12 @@
 # Movie portal project
+
+## UPDATE Aug 17
+
+- Eric added topten feature, a shopping cart feature and the admin eblast with a $_POST variable to connect with the newsletter feature.
+- full feature integration pending, removing code redundancies pending
+
+
+
 ## Tasklist
 - [x] Create Repo
 - [x] Invite Members
@@ -22,3 +30,16 @@ August 2nd Update - Navaneeth
 - The feature is availble at <server_ip>/fetchmovies.
 - Instructions regarding the feature is provided on the same page as well.
 - All the HTTP requests are handled through ajax calls, thus the user can do all the operations without browsing out of the page.
+
+
+
+
+
+### Navaneeth Ashok
+#### Features
+- [x] Fetch Movie Details from OMDB API and add to Database.
+- [x] Movie Management page : Listing all the movies with option to remove it from Database
+- [x] Newsletter Portal : Create, Update, Delete css stylized html emails stored in DB
+#### File Locations
+- /fetchmovies
+- /newsletter
