@@ -43,3 +43,12 @@ August 2nd Update - Navaneeth
 #### File Locations
 - /fetchmovies
 - /newsletter
+
+### Ruth Frogoso
+#### Features
+- [x] Newest Movies List: Listing the newest movies from the database with full CRUD for admin users
+- [x] Cast Bio : Listing cast bios from the database with full CRUD for admin users
+- [ ] Snack Recommendation
+#### File Locations
+- /newmovies
+- /castbios
