@@ -29,7 +29,7 @@
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item" href="#">Top Ten Chart</a></li>
-                            <li><a class="dropdown-item" href="newmovies/list-newmovies.php">Newest Movies List</a></li>
+                            <li><a class="dropdown-item" href="newmovies/list-newmovies-users.php">Newest Movies List</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">

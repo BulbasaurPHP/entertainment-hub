@@ -25,6 +25,11 @@ if(isset($_POST['addNewMovie'])) {
     }
 }
 
+session_start();
+if(!isset($_SESSION['name'])) {
+    header('Location: loginpage.php');
+}
+
 ?>
 
 <!DOCTYPE html>
