@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 use Model\leagues;
 use Model\Database ;
 use Model\Participant;
@@ -11,13 +11,10 @@ $id = $name = $prize = $winners = $movies = $participants = "" ;
 
 if(isset($_POST["details"])) {
     session_start();
-    var_dump($_SESSION);
     $id=$_POST['pid'];
-    $email = $_SESSION['email'] ;
     $u = new Participant() ;
-    $user = $u->finduser($email ,$db ) ;
+    $user = $u->finduser($_SESSION['email'] ,$db ) ;
     $name = $user->name;
-    var_dump($name);
 
     $l = new leagues();
     $league = $l->leaguedetails($db, $id);
@@ -31,11 +28,6 @@ if(isset($_POST["details"])) {
     $m = new leagues();
     $movies = $m->listmovies($db) ;
 }
-elseif(isset($_POST['participate'])){
-}
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,7 +60,8 @@ elseif(isset($_POST['participate'])){
                 <div class="col-sm-6 text-start">
                     <form method="post" action="addparticipant.php" class="form-group">
                         <div class="container p-4 m-4">
-                            <label for="movie" class="col-sm-12"> Select a movie to nominate for <?php echo $name ?> </label>
+                            <input type="hidden" name="email" value="<?= $_SESSION['email']?>">
+                            <label for="movie" id="movie" class="col-sm-12"> Select a movie to nominate for <?php echo $name ?> </label>
                             <select name="movie" id="movie">
                                 <?php foreach ($movies as $movie){?>
                                     <option value="<?php echo $movie->name?>"><?php echo $movie->name ?></option>
