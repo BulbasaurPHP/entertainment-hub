@@ -10,11 +10,6 @@ $dbcon = Database::getDb();
 $n = new NewMovie();
 $newmovies = $n->getAllNewMovies(Database::getDb());
 
-session_start();
-if(!isset($_SESSION['name'])) {
-    header('Location: loginpage.php');
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -38,13 +33,8 @@ if(!isset($_SESSION['name'])) {
             <div class="container">
                 <h1>New Movies</h1>
             </div>
-
             <!-- displaying data from table -->
             <div class="container">
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <a href="add-newmovies.php" class="btn btn-success me-md-2">Add A New Movie</a>
-                    <a href="logoutpage.php" class="btn btn-outline-danger me-md-2">Log out</a>
-                </div>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -59,22 +49,11 @@ if(!isset($_SESSION['name'])) {
                             <td style="display:none"><?= $newmovie->movie_id; ?></td>
                             <td><?= $newmovie->title; ?></td>
                             <td><?= $newmovie->release_date; ?></td>
-                            <td>
-                                <form action="update-newmovies.php" method="post">
-                                    <input type="hidden" name="movie_id" value=" <?= $newmovie->movie_id; ?>" />
-                                    <input type="submit" class="button btn btn-primary" name="updateNewMovie" value="Update" />
-                                </form>
-                            </td>
-                            <td>
-                                <form action="delete-newmovies.php" method="post">
-                                    <input type="hidden" name="movie_id" value=" <?= $newmovie->movie_id; ?>" />
-                                    <input type="submit" class="button btn btn-danger" name="deleteNewMovie" value="Delete" />
-                                </form>
-                            </td>
                         </tr>
                         <?php } ?>
                     </tbody>
                 </table>
+                <a href="add-newmovies.php" class="btn btn-outline-primary btn-md float-right">Edit List</a>
             </div>
         </main>
 

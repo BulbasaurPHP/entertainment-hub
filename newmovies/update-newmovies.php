@@ -43,6 +43,11 @@ if(isset($_POST['updNewMovie'])) {
     }
 }
 
+session_start();
+if(!isset($_SESSION['name'])) {
+    header('Location: loginpage.php');
+}
+
 ?>
 
 <!DOCTYPE html>

@@ -21,3 +21,8 @@ if(isset($_POST['movie_id'])){
     }
 
 }
+
+session_start();
+if(!isset($_SESSION['name'])) {
+    header('Location: loginpage.php');
+}
