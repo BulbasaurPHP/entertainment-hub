@@ -62,3 +62,11 @@ August 2nd Update - Navaneeth
 - /eStore
 - /admin-eblast
 - /topTenmovies
+
+### Smital Christian
+#### Features
+- [x] Nomination Events: Listing the nomination events from the database with full CRUD for admin users
+- [x] Trailer Listing : Upload trailers in the database as well as in the folder with size and file constraints.
+- [x] Trailer Display : display trailers in a series under each nomination events using nomination_id in the front page.
+#### File Locations
+- /nomination_events
