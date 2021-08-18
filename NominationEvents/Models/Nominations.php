@@ -1,39 +1,43 @@
 <?php
-namespace Model;
+namespace Models;
 
 
 use PDO;
 
 class Nominations
 {
-    public function listevents($db)
+    public function listEvents($dbcon)
     {
-        $sql = "SELECT * FROM nomination_events";
-        $pdostm = $db->prepare($sql);
+        $sql = "SELECT * FROM nomination_event";
+        $pdostm = $dbcon->prepare($sql);
         $pdostm->execute();
 
-        return $pdostm->fetchall(PDO::FETCH_OBJ);
+        $events = $pdostm->fetchall(PDO::FETCH_OBJ);
+        return $events;
     }
-    public function eventdetails($db,$id)
+
+    public function listEventById($id, $db)
     {
-        $sql = "SELECT * FROM nomination_events WHERE nomination_id = :id";
+        $sql = "SELECT * FROM nomination_event WHERE nomination_id = :id";
         $pdostm = $db->prepare($sql);
-        $pdostm->BindParam(':id',$id);
+        $pdostm->bindParam(':id', $id);
         $pdostm->execute();
-
-        return $pdostm->fetch(PDO::FETCH_OBJ);
+        return $pdostm->fetch(\PDO::FETCH_OBJ);
     }
-    public function deletevent($db,$id)
-    {
-        $sql = "DELETE FROM nomination_events WHERE nomination_id = :id";
 
-        $pst = $db->prepare($sql);
-        $pst->bindParam(':id',$id);
-        return $pst->execute();
-    }
-    public function updateleague($db,$name,$bio,$release,$nomination,$id)
+
+    public function deleteEvent($db, $id)
     {
-        $sql = "UPDATE nomination_events
+        $sql = "DELETE FROM nomination_event WHERE nomination_id = :id";
+        $pdostm = $db->prepare($sql);
+        $pdostm->bindParam(':id', $id);
+        $count = $pdostm->execute();
+        return $count;
+    }
+
+    public function updateEvents($id, $name, $bio, $release, $nomination, $db)
+    {
+        $sql = "UPDATE nomination_event
         SET name = :name,
             bio = :bio,
             release_date = :release,
@@ -42,19 +46,18 @@ class Nominations
 
         $pst = $db->prepare($sql);
 
-        $pst->bindParam(':name',$name);
-        $pst->bindParam(':bio',$bio);
-        $pst->bindParam(':release',$release);
-        $pst->bindParam(':nomination',$nomination);
-        $pst->bindParam(':id',$id);
-
-        return $pst->execute();
+        $pst->bindParam(':name', $name);
+        $pst->bindParam(':bio', $bio);
+        $pst->bindParam(':release', $release);
+        $pst->bindParam(':nomination', $nomination);
+        $pst->bindParam(':id', $id);
+        $count = $pst->execute();
+        return $count;
     }
 
-
-
-    public function addevents($db,$name,$bio,$release,$nomination){
-        $sql = "INSERT INTO nomination_events (name, bio, release_date,nomination_date) 
+    public function addEvents($db, $name, $bio, $release, $nomination)
+    {
+        $sql = "INSERT INTO nomination_event (name, bio, release_date,nomination_date) 
               VALUES (:name, :bio, :release_date, :nomination_date) ";
 
         $pst = $db->prepare($sql);
@@ -66,5 +69,29 @@ class Nominations
         $count = $pst->execute();
         return $count;
 
+    }
+
+    public function addtrailer($db, $nomination_id, $name, $location)
+    {
+        $sql = "INSERT INTO trailer(nomination_id,name,location) 
+              VALUES (:nomination_id, :name, :location) ";
+
+        $pst = $db->prepare($sql);
+        $pst->bindParam(':nomination_id', $nomination_id);
+        $pst->bindParam(':name', $name);
+        $pst->bindParam(':location', $location);
+
+        $count = $pst->execute();
+        return $count;
+    }
+
+    public function listtrailer($dbcon)
+    {
+        $sql = "SELECT * FROM trailer";
+        $pdostm = $dbcon->prepare($sql);
+        $pdostm->execute();
+
+        $trailers = $pdostm->fetchall(PDO::FETCH_OBJ);
+        return $trailers;
     }
 }

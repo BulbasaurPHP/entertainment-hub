@@ -26,6 +26,7 @@ if(isset($_POST['updateNewMovie'])) {
 
 // update the database
 if(isset($_POST['updNewMovie'])) {
+
     //gather values from the form
     $id = $_POST['sid'];
     $title = $_POST['title'];

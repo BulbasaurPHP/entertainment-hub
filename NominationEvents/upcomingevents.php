@@ -1,6 +1,25 @@
 <?php
+require_once '../header.php';
+//require_once 'database.php';
+
+use Models\{ Database, Nominations};
+
+require_once 'vendor/autoload.php';
+
+
+
+//require_once 'Models/Database.php';
+//require_once 'Models/NewMovie.php';
+
+$dbcon = Database::getDb();
+$e = new Nominations();
+$trailers = $e->listtrailer(Database::getDb());
+
+$events = $e->listEvents(Database::getDb());
+
 
 ?>
+
 <html>
 
 <head>
@@ -16,139 +35,68 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
-
 <body>
-<?php
-require_once '../header.php';
-//require_once 'database.php';
-?>
-
-<?php
-
-?>
-
-
 <main id="main">
     <div class="jumbotron text-center">
         <h1>NOMINATION 2021</h1>
     </div>
 
+
     <div class="container">
         <div class="row">
             <h2 class="nominationTitle">BEST MOVIE OF THE YEAR</h2>
-            <div class="col-sm-3">
-                <video width="250" height="200" controls>
-                    <source src='".$location."' type="video/mp4">
-                </video>
-                <h3><?php ?></h3>
-                <p>Release Date : <?php ?></p>
-                <p>Nomination Date : <?php ?></p>
+            <?php foreach ($trailers as $trailer) { ?>
+                    <div class="col-sm-3">
+                        <video width="250" height="200" controls>
+                            <source src="<?= $trailer -> location; ?>" type="video/mp4">
+                        </video>
+                    </div>
+            <?php } ?>
+        </div>
+    </div>
 
-            </div>
-            <div class="col-sm-3">
-                <video width="250" height="200" controls>
-                    <source src="movie.mp4" type="video/mp4">
-                </video>
-                <h3>Column 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
-            <div class="col-sm-3">
-                <video width="250" height="200" controls>
-                    <source src="movie.mp4" type="video/mp4">
-                </video>
-                <h3>Column 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
-            <div class="col-sm-3">
-                <video width="250" height="200" controls>
-                    <source src="movie.mp4" type="video/mp4">
-                </video>
-                <h3>Column 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
+
+    <div class="container">
+        <div class="row">
+            <h2 class="nominationTitle">BEST ROLE IN LEAD ACTRESS</h2>
+            <?php foreach ($trailers as $trailer) { ?>
+                <div class="col-sm-3">
+                    <video width="250" height="200" controls>
+                        <source src="<?= $trailer -> location; ?>" type="video/mp4">
+                    </video>
+                </div>
+            <?php } ?>
         </div>
     </div>
 
     <div class="container">
         <div class="row">
-            <h2 class="nominationTitle">BEST ACTOR IN A LEADING ROLE</h2>
-            <div class="col-sm-3">
-                <video width="250" height="200" controls>
-                    <source src="movie.mp4" type="video/mp4">
-                </video>
-                <h3>Column 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-
-            </div>
-            <div class="col-sm-3">
-                <video width="250" height="200" controls>
-                    <source src="movie.mp4" type="video/mp4">
-                </video>
-                <h3>Column 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
-            <div class="col-sm-3">
-                <video width="250" height="200" controls>
-                    <source src="movie.mp4" type="video/mp4">
-                </video>
-                <h3>Column 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
-            <div class="col-sm-3">
-                <video width="250" height="200" controls>
-                    <source src="movie.mp4" type="video/mp4">
-                </video>
-                <h3>Column 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
+            <h2 class="nominationTitle">BEST ROLE IN LEAD ACTOR</h2>
+            <?php foreach ($trailers as $trailer) { ?>
+                <div class="col-sm-3">
+                    <video width="250" height="200" controls>
+                        <source src="<?= $trailer -> location; ?>" type="video/mp4">
+                    </video>
+                </div>
+            <?php } ?>
         </div>
+
     </div>
 
     <div class="container">
         <div class="row">
-            <h2 class="nominationTitle">BEST ACTRESS IN A LEADING ROLE</h2>
-            <div class="col-sm-3">
-                <video width="250" height="200" controls>
-                    <source src="movie.mp4" type="video/mp4">
-                </video>
-                <h3>Column 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            <h2 class="nominationTitle">ANIMATED FEATURE FILM</h2>
+            <?php foreach ($trailers as $trailer) { ?>
+                <div class="col-sm-3">
+                    <video width="250" height="200" controls>
+                        <source src="<?= $trailer -> location; ?>" type="video/mp4">
+                    </video>
+                </div>
 
-            </div>
-            <div class="col-sm-3">
-                <video width="250" height="200" controls>
-                    <source src="movie.mp4" type="video/mp4">
-                </video>
-                <h3>Column 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
-            <div class="col-sm-3">
-                <video width="250" height="200" controls>
-                    <source src="movie.mp4" type="video/mp4">
-                </video>
-                <h3>Column 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
-            <div class="col-sm-3">
-                <video width="250" height="200" controls>
-                    <source src="movie.mp4" type="video/mp4">
-                </video>
-                <h3>Column 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
+            <?php } ?>
         </div>
     </div>
+
 </main>
 
 

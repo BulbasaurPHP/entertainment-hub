@@ -1,25 +1,22 @@
 <?php
-if(isset($_POST['id'])){
 
-    $user = 'masterAdmin';
-    $password = 'bulbasaurAdmin';
-    $dbname = 'bulbasaur-db.ckohzdqyvmzm.ca-central-1.rds.amazona';
-    $dsn = 'mysql:host=localhost;dbname=' . $dbname;
+use Models\{ Database, Nominations};
 
-    $dbcon = new PDO($dsn, $user, $password);
+require_once 'vendor/autoload.php';
 
-    $sql = "DELETE FROM nomination_events WHERE nomination_id = :nomination_id";
+if(isset($_POST['nomination_id'])){
+    $id = $_POST['nomination_id'];
 
-    $nomination_id = $_POST['nomination_id'];
-    $pst = $dbcon->prepare($sql);
-    $pst->bindParam(':id', $id);
-    $count = $pst->execute();
-    if($count){
-        header("Location: list-nomination.php");
+    $db = Database::getDb();
+
+    $e = new Nominations();
+    $count = $e->deleteEvent($db,$id);
+
+    if($count) {
+        // redirect to the list
+        header("Location:listnominationevents.php");
+    } else {
+        echo "error deleting movie";
     }
-    else {
-        echo " problem deleting";
-    }
-
 
 }

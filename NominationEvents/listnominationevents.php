@@ -1,22 +1,23 @@
 <?php
-$user = 'masterAdmin';
-$password = 'bulbasaurAdmin';
-$dbname = 'bulbasaur-db.ckohzdqyvmzm.ca-central-1.rds.amazona';
-$dsn = 'mysql:host=localhost;dbname=' . $dbname;
 
-$dbcon = new PDO($dsn, $user, $password);
 
-$sql = "SELECT * FROM nomination_events";
-$pdostm = $dbcon->prepare($sql);
-$pdostm->execute();
+use Models\{ Database, Nominations};
 
-$nominations = $pdostm->fetchAll(PDO::FETCH_ASSOC);
+require_once 'vendor/autoload.php';
+
+
+//require_once 'Models/Database.php';
+//require_once 'Models/NewMovie.php';
+
+$dbcon = Database::getDb();
+$e = new Nominations();
+$events = $e->listEvents(Database::getDb());
 
 
 ?>
 
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,7 +31,7 @@ $nominations = $pdostm->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
 <header>
-    <?php require_once 'header.php'; ?>
+    <?php require_once '../header.php'; ?>
 </header>
 <main>
     <div class="container">
@@ -50,22 +51,22 @@ $nominations = $pdostm->fetchAll(PDO::FETCH_ASSOC);
             </tr>
             </thead>
             <tbody>
-            <?php foreach ($nominations as $nomination) { ?>
+            <?php foreach ($events as $event) { ?>
                 <tr>
-                    <td style="display:none"><?= $nomination->nomination_id; ?></td>
-                    <td><?= $nomination->name; ?></td>
-                    <td><?= $nomination->bio; ?></td>
-                    <td><?= $nomination->releasedate; ?></td>
-                    <td><?= $nomination->nominationdate; ?></td>
+                    <td><?= $event->nomination_id; ?></td>
+                    <td><?= $event->name; ?></td>
+                    <td><?= $event->bio; ?></td>
+                    <td><?= $event->release_date; ?></td>
+                    <td><?= $event->nomination_date; ?></td>
                     <td>
-                        <form action="update-nominationevents.php" method="post">
-                            <input type="hidden" name="movie_id" value=" <?= $nomination->nomination_id; ?>" />
+                        <form action="updatenominationevents.php" method="post">
+                            <input type="hidden" name="nomination_id" value=" <?= $event->nomination_id; ?>" />
                             <input type="submit" class="button btn btn-primary" name="updateNominationEvents" value="Update" />
                         </form>
                     </td>
                     <td>
                         <form action="deletenominationevents.php" method="post">
-                            <input type="hidden" name="movie_id" value=" <?= $nomination->nomination_id; ?>" />
+                            <input type="hidden" name="nomination_id" value=" <?= $event->nomination_id; ?>" />
                             <input type="submit" class="button btn btn-danger" name="deleteNominationEvents" value="Delete" />
                         </form>
                     </td>
@@ -73,11 +74,12 @@ $nominations = $pdostm->fetchAll(PDO::FETCH_ASSOC);
             <?php } ?>
             </tbody>
         </table>
+        <a href="addnominationevents.php" class="btn btn-success btn-lg float-right">Add Event</a>
     </div>
 </main>
 
 <footers>
-    <?php require_once 'footer.php'; ?>
+    <?php require_once '../footer.php'; ?>
 </footers>
 </body>
 </html>
