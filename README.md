@@ -52,3 +52,13 @@ August 2nd Update - Navaneeth
 #### File Locations
 - /newmovies
 - /castbios
+
+### Eric Wickham
+#### Features
+- [x] eStore: Buy items from our online store
+- [x] Admin eBlast : Offer administrators the ability to contact every single registered user in the database very quickly
+- [x] Top Ten Movies: nominate and vote for your favourite movie to see it reach the top ten in our database! 
+#### File Locations
+- /eStore
+- /admin-eblast
+- /topTenmovies
