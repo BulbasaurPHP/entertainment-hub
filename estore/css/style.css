@@ -1,0 +1,72 @@
+
+.merch-item-flex{
+    display:flex;
+}
+
+.merch-item {
+    flex: 1 0 0; 
+    max-width: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 20px;
+    text-align: center;
+}
+
+.merch-item:hover {
+
+    background-color: lightblue;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+/* PRODUCT PAGE */
+*{
+    box-sizing: border-box;
+}
+
+
+#productimg{
+
+    display: inline;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+#productdiv {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#estore-container{
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 10%;
+    padding-right:10%;
+    margin-bottom: 20px;
+}
+
+#estore-display{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    align-self: center;
+}
+
+#emptycart{
+    display: inline;
+}
+
+
+
+#empty_cart {
+    margin-bottom: 40px;
+}
+
