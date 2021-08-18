@@ -68,7 +68,7 @@
                         <!--<a class="nav-link" href="#">Trivia</a>-->
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#">General Trivia</a></li>
-                            <li><a class="dropdown-item" href="#">Cast Bio</a></li>
+                            <li><a class="dropdown-item" href="castbios/list-castbios-users.php">Cast Bio</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">

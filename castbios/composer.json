@@ -1,0 +1,15 @@
+{
+    "name": "ruthf/castbios",
+    "autoload": {
+        "psr-4": {
+            "Model\\": "Models/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ruth frogoso",
+            "email": "ruthfrogoso@gmail.com"
+        }
+    ],
+    "require": {}
+}
