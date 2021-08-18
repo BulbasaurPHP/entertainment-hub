@@ -9,7 +9,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
 
-//FETCH NAMES AND EMAILS FROM THE SERVER - overly simplified prior to integrating with DB access feature
+//FETCH NAMES AND EMAILS FROM THE SERVER 
 
 $sql = "SELECT * FROM user";
 $stmt = $db->prepare($sql);
@@ -23,10 +23,7 @@ $emails = array_column($recipients, 'email');
 $names = array_column($recipients, 'name');
 
 
-/**
- **NAVANEETH**
- * HERE IS THE IF STATEMENT TO PULL DATA FROM a post variable originating from your newsletter app NEWSLETTER OR TO ENTER PLACEHOLDER TEXT.
- */
+//$_POST available to hook into the newsletter feature. if the post var isn't set, just have placeholder text in the tinymce
 
 if(isset($_POST['newsletterEblast'])) {
     $newsletterContent = $_POST['newsletterEblast'];
