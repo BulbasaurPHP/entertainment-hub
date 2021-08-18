@@ -22,6 +22,19 @@ $recipients = $stmt->fetchAll();
 $emails = array_column($recipients, 'email');
 $names = array_column($recipients, 'name');
 
+
+/**
+ **NAVANEETH**
+ * HERE IS THE IF STATEMENT TO PULL DATA FROM a post variable originating from your newsletter app NEWSLETTER OR TO ENTER PLACEHOLDER TEXT.
+ */
+
+if(isset($_POST['newsletterEblast'])) {
+    $newsletterContent = $_POST['newsletterEblast'];
+}else {
+    $newsletterContent = "please enter your message to users";
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -32,14 +45,16 @@ $names = array_column($recipients, 'name');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="..styles/style.css" />
+    <script src="https://cdn.tiny.cloud/1/zcn2jovpyxgp6h9jrv49qzc6wd8fo4mk3sc5nufhezkc4ao1/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script src="scripts/bootstrap.bundle.js"></script>
     <script src="https://kit.fontawesome.com/b55d11ffa3.js" crossorigin="anonymous"></script>   
-     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Eblast</title>
 </head>
 <body>
 
-<?php include 'header.php'; ?>
+<?php include '../header.php'; ?>
 
 <h1>Admin Email Users Feature</h1>
     <form width="600px" id="contactForm" method="post" action="">
@@ -48,11 +63,19 @@ $names = array_column($recipients, 'name');
         
         <input name="subject" id="formSubject" type="text" placeholder="Subject Line"/>
         <h3>Email Message:</h3>
-        <textarea name="body" id="formBody" rows=6 placeholder="Write your email here" type="text"> </textarea>
+        <textarea name="body" id="formBody" rows='6' type="text"><?php echo $newsletterContent ?></textarea>
         <br>
         <input type="submit" id="formEblast" name="eblast" value="Send Email">
 
     </form> 
+    
+
+    <!--Tiny MCE script initializor -->
+    <script>
+      tinymce.init({
+        selector: '#formBody'
+      });
+    </script>
 
     <h2>Recipient List</h2>
         <!-- THIS IS JUST AN EXAMPLE TABLE OF THE NAMES/EMAILS TO BE USED LATER -->
@@ -146,6 +169,7 @@ if(isset($_POST['eblast'])) {
 }
 
         ?>
+
+<?php require_once '../footer.php'; ?>
 </body>
-<?php include 'footer.php'; ?>
 </html>
