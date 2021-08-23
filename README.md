@@ -1,5 +1,7 @@
 # Movie portal project
 
+###
+
 ## UPDATE Aug 17
 
 - Eric added topten feature, a shopping cart feature and the admin eblast with a $_POST variable to connect with the newsletter feature.
@@ -31,7 +33,8 @@ August 2nd Update - Navaneeth
 - Instructions regarding the feature is provided on the same page as well.
 - All the HTTP requests are handled through ajax calls, thus the user can do all the operations without browsing out of the page.
 
-
+August 23-Update- Ambaram
+-[x] All the featurs finalised and added to the repo.
 
 
 
@@ -70,3 +73,14 @@ August 2nd Update - Navaneeth
 - [x] Trailer Display : display trailers in a series under each nomination events using nomination_id in the front page.
 #### File Locations
 - /nomination_events
+
+###Ambaram
+#### Features
+-[x] Nomination League
+-[x] Mpvie Trivia
+-[X] Playlist
+
+### File Locations
+-[x] /nomonationleague
+-[x] /movietrivia
+-[x] /playlist
